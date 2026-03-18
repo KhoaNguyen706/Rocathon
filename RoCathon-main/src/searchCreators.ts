@@ -1,15 +1,15 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-import pool from './db';
+import supabase from './db';
 import { getEmbeddingCached } from './embed';
 import type { BrandProfile, RankedCreator, Industry } from './types';
 
 const CANDIDATE_LIMIT = 50;
 
-const WEIGHT_SEMANTIC = 0.40;
-const WEIGHT_PROJECTED = 0.45;
-const WEIGHT_DEMOGRAPHIC = 0.15;
+const W_SEMANTIC = 0.40;
+const W_PROJECTED = 0.50;
+const W_DEMOGRAPHIC = 0.10;
 
 function computeDemographicBonus(
   creatorGender: string,
@@ -37,19 +37,14 @@ export async function searchCreators(
   const queryEmbedding = await getEmbeddingCached(query);
   const embString = `[${queryEmbedding.join(',')}]`;
 
-  const { rows } = await pool.query(
-    `SELECT
-       username, bio, content_style_tags, projected_score,
-       follower_count, total_gmv_30d, avg_views_30d,
-       engagement_rate, gpm, major_gender, gender_pct, age_ranges,
-       1 - (embedding <=> $1::vector) AS semantic_score
-     FROM creators
-     ORDER BY embedding <=> $1::vector
-     LIMIT $2`,
-    [embString, CANDIDATE_LIMIT]
-  );
+  const { data: rows, error } = await supabase.rpc('match_creators', {
+    query_embedding: embString,
+    match_count: CANDIDATE_LIMIT,
+  });
 
-  const ranked: RankedCreator[] = rows.map((row: any) => {
+  if (error) throw error;
+
+  const ranked: RankedCreator[] = (rows ?? []).map((row: any) => {
     const semanticScore: number = parseFloat(row.semantic_score);
     const projectedRaw: number = parseFloat(row.projected_score);
     const normalizedProjected = normalizeProjectedScore(projectedRaw);
@@ -61,9 +56,9 @@ export async function searchCreators(
     );
 
     const finalScore =
-      WEIGHT_SEMANTIC * semanticScore +
-      WEIGHT_PROJECTED * normalizedProjected +
-      WEIGHT_DEMOGRAPHIC * demographicBonus;
+      W_SEMANTIC * semanticScore +
+      W_PROJECTED * normalizedProjected +
+      W_DEMOGRAPHIC * demographicBonus;
 
     return {
       username: row.username,

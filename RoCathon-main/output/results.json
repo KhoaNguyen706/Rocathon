@@ -1,0 +1,918 @@
+{
+  "brand_smart_home": {
+    "query": "Affordable home decor for small apartments",
+    "brand": {
+      "id": "brand_smart_home",
+      "industries": [
+        "Home"
+      ],
+      "target_audience": {
+        "gender": "FEMALE",
+        "age_ranges": [
+          "25-34"
+        ]
+      },
+      "gmv": 50000
+    },
+    "top_10": [
+      {
+        "username": "small_space_living_lee",
+        "bio": "Maximizing tiny apartments and studio spaces. Clever storage solutions, multifunctional furniture, and smart layouts.",
+        "content_style_tags": [
+          "Home"
+        ],
+        "projected_score": 90.2,
+        "metrics": {
+          "follower_count": 1854255,
+          "total_gmv_30d": 31445,
+          "avg_views_30d": 321751,
+          "engagement_rate": 0.07,
+          "gpm": 40,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 9247,
+            "age_ranges": [
+              "35-44",
+              "45-54",
+              "55+"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.567,
+          "projected_score": 90.2,
+          "final_score": 0.6543
+        }
+      },
+      {
+        "username": "home_gym_builds",
+        "bio": "Budget home gym setup guides, equipment reviews, and space-saving fitness solutions for apartment workouts.",
+        "content_style_tags": [
+          "Sports & Outdoors",
+          "Health"
+        ],
+        "projected_score": 92.59,
+        "metrics": {
+          "follower_count": 1270148,
+          "total_gmv_30d": 122934,
+          "avg_views_30d": 1913655,
+          "engagement_rate": 0.12,
+          "gpm": 43,
+          "demographics": {
+            "major_gender": "MALE",
+            "gender_pct": 6810,
+            "age_ranges": [
+              "25-34",
+              "45-54"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.4243,
+          "projected_score": 92.59,
+          "final_score": 0.6271
+        }
+      },
+      {
+        "username": "thrift_flip_dani",
+        "bio": "Thrift store fashion finds and upcycling projects. Sustainable style on a secondhand budget for everyday wear.",
+        "content_style_tags": [
+          "Fashion"
+        ],
+        "projected_score": 90.68,
+        "metrics": {
+          "follower_count": 942783,
+          "total_gmv_30d": 45650,
+          "avg_views_30d": 1615229,
+          "engagement_rate": 0.12,
+          "gpm": 37,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 5620,
+            "age_ranges": [
+              "18-24",
+              "25-34",
+              "45-54"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.319,
+          "projected_score": 90.68,
+          "final_score": 0.6111
+        }
+      },
+      {
+        "username": "plumbing_diy_skip",
+        "bio": "Home plumbing repairs and upgrades that homeowners can tackle themselves. Saving thousands on contractor bills.",
+        "content_style_tags": [
+          "Tools & Hardware",
+          "Home"
+        ],
+        "projected_score": 96.93,
+        "metrics": {
+          "follower_count": 242361,
+          "total_gmv_30d": 183081,
+          "avg_views_30d": 1869676,
+          "engagement_rate": 0.04,
+          "gpm": 12,
+          "demographics": {
+            "major_gender": "MALE",
+            "gender_pct": 8833,
+            "age_ranges": [
+              "35-44",
+              "45-54"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.3341,
+          "projected_score": 96.93,
+          "final_score": 0.5953
+        }
+      },
+      {
+        "username": "home_office_setup_pam",
+        "bio": "Ergonomic home office design, productivity setups, and desk organization for remote workers who want to level up.",
+        "content_style_tags": [
+          "Home",
+          "Food & Beverage"
+        ],
+        "projected_score": 83.86,
+        "metrics": {
+          "follower_count": 1777068,
+          "total_gmv_30d": 45459,
+          "avg_views_30d": 1198299,
+          "engagement_rate": 0.05,
+          "gpm": 19,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 6805,
+            "age_ranges": [
+              "18-24",
+              "25-34"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.3786,
+          "projected_score": 83.86,
+          "final_score": 0.5497
+        }
+      },
+      {
+        "username": "mid_century_milo",
+        "bio": "Mid-century modern interior design, vintage furniture hunting, and creating timeless spaces with retro flair.",
+        "content_style_tags": [
+          "Home",
+          "Tools & Hardware"
+        ],
+        "projected_score": 82.97,
+        "metrics": {
+          "follower_count": 1707456,
+          "total_gmv_30d": 23644,
+          "avg_views_30d": 855938,
+          "engagement_rate": 0.09,
+          "gpm": 23,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 7668,
+            "age_ranges": [
+              "25-34",
+              "35-44"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.4038,
+          "projected_score": 82.97,
+          "final_score": 0.5486
+        }
+      },
+      {
+        "username": "toddler_activities_jen",
+        "bio": "Educational play ideas, sensory activities, and creative projects for toddlers. Making learning fun at home.",
+        "content_style_tags": [
+          "Baby & Maternity",
+          "Health"
+        ],
+        "projected_score": 90.01,
+        "metrics": {
+          "follower_count": 1573784,
+          "total_gmv_30d": 49720,
+          "avg_views_30d": 1209453,
+          "engagement_rate": 0.03,
+          "gpm": 16,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 7683,
+            "age_ranges": [
+              "35-44",
+              "45-54"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.2564,
+          "projected_score": 90.01,
+          "final_score": 0.5277
+        }
+      },
+      {
+        "username": "paint_pro_tips_mick",
+        "bio": "Interior and exterior painting techniques, roller and brush tips, and color selection advice for flawless finish results.",
+        "content_style_tags": [
+          "Tools & Hardware",
+          "Home"
+        ],
+        "projected_score": 87.38,
+        "metrics": {
+          "follower_count": 1142592,
+          "total_gmv_30d": 53750,
+          "avg_views_30d": 564078,
+          "engagement_rate": 0.1,
+          "gpm": 23,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 8177,
+            "age_ranges": [
+              "35-44",
+              "45-54",
+              "55+"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.3021,
+          "projected_score": 87.38,
+          "final_score": 0.5131
+        }
+      },
+      {
+        "username": "lifestyle_creator_bri",
+        "bio": "Casual lifestyle content for everyday moments. I share what is real, not what is perfect.",
+        "content_style_tags": [
+          "Health",
+          "Food & Beverage"
+        ],
+        "projected_score": 82,
+        "metrics": {
+          "follower_count": 310000,
+          "total_gmv_30d": 48000,
+          "avg_views_30d": 620000,
+          "engagement_rate": 0.07,
+          "gpm": 12.5,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 7300,
+            "age_ranges": [
+              "18-24",
+              "25-34",
+              "35-44"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.2618,
+          "projected_score": 82,
+          "final_score": 0.4797
+        }
+      },
+      {
+        "username": "craft_room_heidi",
+        "bio": "Scrapbooking, paper crafting, and DIY project tutorials. Turning everyday materials into meaningful keepsakes.",
+        "content_style_tags": [
+          "Toys & Hobbies"
+        ],
+        "projected_score": 83.64,
+        "metrics": {
+          "follower_count": 1547865,
+          "total_gmv_30d": 32639,
+          "avg_views_30d": 953568,
+          "engagement_rate": 0.04,
+          "gpm": 48,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 9433,
+            "age_ranges": [
+              "35-44",
+              "45-54"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.3209,
+          "projected_score": 83.64,
+          "final_score": 0.4739
+        }
+      }
+    ]
+  },
+  "brand_fitness": {
+    "query": "High-energy fitness content for young men",
+    "brand": {
+      "id": "brand_fitness",
+      "industries": [
+        "Sports & Outdoors",
+        "Health"
+      ],
+      "target_audience": {
+        "gender": "MALE",
+        "age_ranges": [
+          "18-24",
+          "25-34"
+        ]
+      },
+      "gmv": 80000
+    },
+    "top_10": [
+      {
+        "username": "home_gym_builds",
+        "bio": "Budget home gym setup guides, equipment reviews, and space-saving fitness solutions for apartment workouts.",
+        "content_style_tags": [
+          "Sports & Outdoors",
+          "Health"
+        ],
+        "projected_score": 92.59,
+        "metrics": {
+          "follower_count": 1270148,
+          "total_gmv_30d": 122934,
+          "avg_views_30d": 1913655,
+          "engagement_rate": 0.12,
+          "gpm": 43,
+          "demographics": {
+            "major_gender": "MALE",
+            "gender_pct": 6810,
+            "age_ranges": [
+              "25-34",
+              "45-54"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.5293,
+          "projected_score": 92.59,
+          "final_score": 0.7191
+        }
+      },
+      {
+        "username": "marathon_pac_kim",
+        "bio": "Marathon training logs, race-day strategies, and running shoe reviews for long-distance runners of all abilities.",
+        "content_style_tags": [
+          "Sports & Outdoors"
+        ],
+        "projected_score": 88.74,
+        "metrics": {
+          "follower_count": 1199146,
+          "total_gmv_30d": 132064,
+          "avg_views_30d": 1441143,
+          "engagement_rate": 0.06,
+          "gpm": 21,
+          "demographics": {
+            "major_gender": "MALE",
+            "gender_pct": 8347,
+            "age_ranges": [
+              "18-24",
+              "55+"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.4397,
+          "projected_score": 88.74,
+          "final_score": 0.6351
+        }
+      },
+      {
+        "username": "streetwear_king_jose",
+        "bio": "Trendy fashion and streetwear drops. Hype culture, sneakers, and premium fits for real ones.",
+        "content_style_tags": [
+          "Fashion",
+          "Fashion (Men's)"
+        ],
+        "projected_score": 85,
+        "metrics": {
+          "follower_count": 415000,
+          "total_gmv_30d": 60000,
+          "avg_views_30d": 750000,
+          "engagement_rate": 0.06,
+          "gpm": 14.2,
+          "demographics": {
+            "major_gender": "MALE",
+            "gender_pct": 8100,
+            "age_ranges": [
+              "18-24",
+              "25-34",
+              "35-44"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.388,
+          "projected_score": 85,
+          "final_score": 0.5677
+        }
+      },
+      {
+        "username": "run_daily_derek",
+        "bio": "Running coach documenting marathon training, injury prevention, and the mental side of endurance sports.",
+        "content_style_tags": [
+          "Health",
+          "Beauty"
+        ],
+        "projected_score": 81.04,
+        "metrics": {
+          "follower_count": 540527,
+          "total_gmv_30d": 57911,
+          "avg_views_30d": 210965,
+          "engagement_rate": 0.04,
+          "gpm": 27,
+          "demographics": {
+            "major_gender": "MALE",
+            "gender_pct": 5160,
+            "age_ranges": [
+              "45-54"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.4979,
+          "projected_score": 81.04,
+          "final_score": 0.5122
+        }
+      },
+      {
+        "username": "biohack_labs_rex",
+        "bio": "Performance biohacker testing fasting protocols, cold exposure, and nootropics. Data-driven health optimization.",
+        "content_style_tags": [
+          "Health",
+          "Sports & Outdoors"
+        ],
+        "projected_score": 74.47,
+        "metrics": {
+          "follower_count": 487792,
+          "total_gmv_30d": 15567,
+          "avg_views_30d": 202932,
+          "engagement_rate": 0.08,
+          "gpm": 28,
+          "demographics": {
+            "major_gender": "MALE",
+            "gender_pct": 7649,
+            "age_ranges": [
+              "18-24"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.5499,
+          "projected_score": 74.47,
+          "final_score": 0.5008
+        }
+      },
+      {
+        "username": "gut_health_guru_sam",
+        "bio": "Deep dives into gut health, probiotics, and anti-inflammatory diets. Science-backed wellness content you can trust.",
+        "content_style_tags": [
+          "Health"
+        ],
+        "projected_score": 84.48,
+        "metrics": {
+          "follower_count": 1066761,
+          "total_gmv_30d": 32583,
+          "avg_views_30d": 108326,
+          "engagement_rate": 0.08,
+          "gpm": 8,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 8138,
+            "age_ranges": [
+              "18-24",
+              "25-34"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.3509,
+          "projected_score": 84.48,
+          "final_score": 0.4964
+        }
+      },
+      {
+        "username": "luxury_menswear_kaz",
+        "bio": "Investment pieces, heritage brands, and quality over quantity. Building a wardrobe that lasts a lifetime.",
+        "content_style_tags": [
+          "Fashion (Men's)"
+        ],
+        "projected_score": 78.15,
+        "metrics": {
+          "follower_count": 98025,
+          "total_gmv_30d": 52175,
+          "avg_views_30d": 1510046,
+          "engagement_rate": 0.06,
+          "gpm": 14,
+          "demographics": {
+            "major_gender": "MALE",
+            "gender_pct": 7919,
+            "age_ranges": [
+              "25-34",
+              "35-44"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.3689,
+          "projected_score": 78.15,
+          "final_score": 0.4744
+        }
+      },
+      {
+        "username": "lifestyle_creator_bri",
+        "bio": "Casual lifestyle content for everyday moments. I share what is real, not what is perfect.",
+        "content_style_tags": [
+          "Health",
+          "Food & Beverage"
+        ],
+        "projected_score": 82,
+        "metrics": {
+          "follower_count": 310000,
+          "total_gmv_30d": 48000,
+          "avg_views_30d": 620000,
+          "engagement_rate": 0.07,
+          "gpm": 12.5,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 7300,
+            "age_ranges": [
+              "18-24",
+              "25-34",
+              "35-44"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.3534,
+          "projected_score": 82,
+          "final_score": 0.4664
+        }
+      },
+      {
+        "username": "immunity_boost_kelly",
+        "bio": "Natural remedies and supplements for immune support. Functional medicine meets everyday wellness routines.",
+        "content_style_tags": [
+          "Health",
+          "Sports & Outdoors"
+        ],
+        "projected_score": 74.68,
+        "metrics": {
+          "follower_count": 1166673,
+          "total_gmv_30d": 10185,
+          "avg_views_30d": 1213146,
+          "engagement_rate": 0.09,
+          "gpm": 5,
+          "demographics": {
+            "major_gender": "MALE",
+            "gender_pct": 8730,
+            "age_ranges": [
+              "18-24"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.4441,
+          "projected_score": 74.68,
+          "final_score": 0.4611
+        }
+      },
+      {
+        "username": "senior_pets_care_mo",
+        "bio": "Caring for aging pets with mobility, cognitive, and dietary challenges. Compassionate content for those with senior animals.",
+        "content_style_tags": [
+          "Pet"
+        ],
+        "projected_score": 81.21,
+        "metrics": {
+          "follower_count": 103479,
+          "total_gmv_30d": 14461,
+          "avg_views_30d": 1232539,
+          "engagement_rate": 0.04,
+          "gpm": 23,
+          "demographics": {
+            "major_gender": "MALE",
+            "gender_pct": 8544,
+            "age_ranges": [
+              "55+"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.3617,
+          "projected_score": 81.21,
+          "final_score": 0.4598
+        }
+      }
+    ]
+  },
+  "brand_beauty": {
+    "query": "Gentle skincare routines for sensitive skin",
+    "brand": {
+      "id": "brand_beauty",
+      "industries": [
+        "Beauty",
+        "Health"
+      ],
+      "target_audience": {
+        "gender": "FEMALE",
+        "age_ranges": [
+          "25-34",
+          "35-44"
+        ]
+      },
+      "gmv": 120000
+    },
+    "top_10": [
+      {
+        "username": "natural_beauty_jade",
+        "bio": "Clean beauty advocate sharing non-toxic skincare, DIY masks, and sustainable cosmetics for conscious consumers.",
+        "content_style_tags": [
+          "Beauty"
+        ],
+        "projected_score": 91.36,
+        "metrics": {
+          "follower_count": 1494742,
+          "total_gmv_30d": 54627,
+          "avg_views_30d": 1564855,
+          "engagement_rate": 0.12,
+          "gpm": 36,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 7884,
+            "age_ranges": [
+              "55+"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.4461,
+          "projected_score": 91.36,
+          "final_score": 0.6204
+        }
+      },
+      {
+        "username": "gentle_parenting_sue",
+        "bio": "Gentle parenting philosophy, emotional coaching techniques, and respectful communication strategies for conscious parents.",
+        "content_style_tags": [
+          "Baby & Maternity"
+        ],
+        "projected_score": 89.07,
+        "metrics": {
+          "follower_count": 926719,
+          "total_gmv_30d": 48650,
+          "avg_views_30d": 783647,
+          "engagement_rate": 0.02,
+          "gpm": 31,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 7969,
+            "age_ranges": [
+              "18-24",
+              "25-34"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.3198,
+          "projected_score": 89.07,
+          "final_score": 0.5913
+        }
+      },
+      {
+        "username": "toddler_activities_jen",
+        "bio": "Educational play ideas, sensory activities, and creative projects for toddlers. Making learning fun at home.",
+        "content_style_tags": [
+          "Baby & Maternity",
+          "Health"
+        ],
+        "projected_score": 90.01,
+        "metrics": {
+          "follower_count": 1573784,
+          "total_gmv_30d": 49720,
+          "avg_views_30d": 1209453,
+          "engagement_rate": 0.03,
+          "gpm": 16,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 7683,
+            "age_ranges": [
+              "35-44",
+              "45-54"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.2235,
+          "projected_score": 90.01,
+          "final_score": 0.5645
+        }
+      },
+      {
+        "username": "paint_pro_tips_mick",
+        "bio": "Interior and exterior painting techniques, roller and brush tips, and color selection advice for flawless finish results.",
+        "content_style_tags": [
+          "Tools & Hardware",
+          "Home"
+        ],
+        "projected_score": 87.38,
+        "metrics": {
+          "follower_count": 1142592,
+          "total_gmv_30d": 53750,
+          "avg_views_30d": 564078,
+          "engagement_rate": 0.1,
+          "gpm": 23,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 8177,
+            "age_ranges": [
+              "35-44",
+              "45-54",
+              "55+"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.2249,
+          "projected_score": 87.38,
+          "final_score": 0.5322
+        }
+      },
+      {
+        "username": "craft_room_heidi",
+        "bio": "Scrapbooking, paper crafting, and DIY project tutorials. Turning everyday materials into meaningful keepsakes.",
+        "content_style_tags": [
+          "Toys & Hobbies"
+        ],
+        "projected_score": 83.64,
+        "metrics": {
+          "follower_count": 1547865,
+          "total_gmv_30d": 32639,
+          "avg_views_30d": 953568,
+          "engagement_rate": 0.04,
+          "gpm": 48,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 9433,
+            "age_ranges": [
+              "35-44",
+              "45-54"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.2502,
+          "projected_score": 83.64,
+          "final_score": 0.4956
+        }
+      },
+      {
+        "username": "gut_health_guru_sam",
+        "bio": "Deep dives into gut health, probiotics, and anti-inflammatory diets. Science-backed wellness content you can trust.",
+        "content_style_tags": [
+          "Health"
+        ],
+        "projected_score": 84.48,
+        "metrics": {
+          "follower_count": 1066761,
+          "total_gmv_30d": 32583,
+          "avg_views_30d": 108326,
+          "engagement_rate": 0.08,
+          "gpm": 8,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 8138,
+            "age_ranges": [
+              "18-24",
+              "25-34"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.2112,
+          "projected_score": 84.48,
+          "final_score": 0.4905
+        }
+      },
+      {
+        "username": "lifestyle_creator_bri",
+        "bio": "Casual lifestyle content for everyday moments. I share what is real, not what is perfect.",
+        "content_style_tags": [
+          "Health",
+          "Food & Beverage"
+        ],
+        "projected_score": 82,
+        "metrics": {
+          "follower_count": 310000,
+          "total_gmv_30d": 48000,
+          "avg_views_30d": 620000,
+          "engagement_rate": 0.07,
+          "gpm": 12.5,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 7300,
+            "age_ranges": [
+              "18-24",
+              "25-34",
+              "35-44"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.2476,
+          "projected_score": 82,
+          "final_score": 0.474
+        }
+      },
+      {
+        "username": "vintage_glam_rita",
+        "bio": "Old Hollywood and vintage-inspired makeup looks. Retro beauty tutorials with a modern accessible twist.",
+        "content_style_tags": [
+          "Beauty"
+        ],
+        "projected_score": 80.41,
+        "metrics": {
+          "follower_count": 764168,
+          "total_gmv_30d": 8795,
+          "avg_views_30d": 994644,
+          "engagement_rate": 0.05,
+          "gpm": 20,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 7687,
+            "age_ranges": [
+              "25-34",
+              "35-44"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.2605,
+          "projected_score": 80.41,
+          "final_score": 0.4593
+        }
+      },
+      {
+        "username": "holistic_liv_grace",
+        "bio": "Holistic health advocate covering herbal medicine, detox routines, and clean beauty for whole-body wellness.",
+        "content_style_tags": [
+          "Health"
+        ],
+        "projected_score": 77.34,
+        "metrics": {
+          "follower_count": 208917,
+          "total_gmv_30d": 20521,
+          "avg_views_30d": 1110408,
+          "engagement_rate": 0.1,
+          "gpm": 37,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 8917,
+            "age_ranges": [
+              "25-34",
+              "55+"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.3445,
+          "projected_score": 77.34,
+          "final_score": 0.4546
+        }
+      },
+      {
+        "username": "glow_up_journey_mei",
+        "bio": "Documenting my skincare transformation. Before and afters, dermatology visits, and budget-friendly product finds.",
+        "content_style_tags": [
+          "Beauty"
+        ],
+        "projected_score": 72.98,
+        "metrics": {
+          "follower_count": 1107506,
+          "total_gmv_30d": 19666,
+          "avg_views_30d": 1112165,
+          "engagement_rate": 0.05,
+          "gpm": 46,
+          "demographics": {
+            "major_gender": "FEMALE",
+            "gender_pct": 9127,
+            "age_ranges": [
+              "25-34"
+            ]
+          }
+        },
+        "scores": {
+          "semantic_score": 0.428,
+          "projected_score": 72.98,
+          "final_score": 0.4334
+        }
+      }
+    ]
+  }
+}

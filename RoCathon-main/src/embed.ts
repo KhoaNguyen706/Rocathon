@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import pool from './db';
+import supabase from './db';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
@@ -20,23 +20,24 @@ export async function getEmbeddings(texts: string[]): Promise<number[][]> {
 }
 
 export async function getEmbeddingCached(query: string): Promise<number[]> {
-  const cached = await pool.query(
-    'SELECT embedding::text FROM query_cache WHERE query_text = $1',
-    [query]
-  );
+  const { data: cached } = await supabase
+    .from('query_cache')
+    .select('embedding')
+    .eq('query_text', query)
+    .single();
 
-  if (cached.rows.length > 0) {
-    const raw = cached.rows[0].embedding;
-    return JSON.parse(raw) as number[];
+  if (cached?.embedding) {
+    const emb = cached.embedding;
+    if (typeof emb === 'string') return JSON.parse(emb) as number[];
+    return emb as number[];
   }
 
   const embedding = await getEmbedding(query);
   const embString = `[${embedding.join(',')}]`;
 
-  await pool.query(
-    'INSERT INTO query_cache (query_text, embedding) VALUES ($1, $2) ON CONFLICT (query_text) DO NOTHING',
-    [query, embString]
-  );
+  await supabase
+    .from('query_cache')
+    .upsert({ query_text: query, embedding: embString });
 
   return embedding;
 }
