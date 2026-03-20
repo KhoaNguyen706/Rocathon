@@ -4,7 +4,8 @@
   "scripts": {
     "setup-db": "npx ts-node scripts/setupDb.ts",
     "ingest": "npx ts-node scripts/ingest.ts",
-    "demo": "npx ts-node scripts/demo.ts"
+    "demo": "npx ts-node scripts/demo.ts",
+    "search": "npx ts-node scripts/search.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.99.2",

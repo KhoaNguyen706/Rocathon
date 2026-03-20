@@ -72,6 +72,23 @@ npm run demo
 
 Runs 3 search queries and saves results to `output/results.json`. Also generates `output/submission.json` with the brand_smart_home top 10.
 
+### 6. Run any custom query
+
+```bash
+npm run search -- "your query here" brand_smart_home
+```
+
+Available brands: `brand_smart_home` (default), `brand_fitness`, `brand_beauty`
+
+Examples:
+
+```bash
+npm run search -- "Affordable home decor for small apartments"
+npm run search -- "High-energy fitness content" brand_fitness
+npm run search -- "Gentle skincare routines" brand_beauty
+npm run search -- "Tech gadgets for college students" brand_smart_home
+```
+
 ## Extra Features
 
 - **Query cache** — Repeated queries skip the OpenAI API entirely. Embeddings are cached in a `query_cache` table so the same search is instant and free the second time.
@@ -93,7 +110,8 @@ RoCathon-main/
 ├── scripts/
 │   ├── setupDb.ts             # Prints setup SQL
 │   ├── ingest.ts              # Embeds + inserts creators
-│   └── demo.ts                # Runs demo queries, outputs JSON
+│   ├── demo.ts                # Runs demo queries, outputs JSON
+│   └── search.ts              # CLI — run any custom query
 └── output/
     ├── results.json           # All demo results
     └── submission.json        # brand_smart_home top 10 (submission file)
