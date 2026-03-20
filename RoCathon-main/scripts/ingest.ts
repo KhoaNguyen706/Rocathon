@@ -22,6 +22,10 @@ async function ingest() {
   const creators: Creator[] = JSON.parse(raw);
   console.log(`Loaded ${creators.length} creators from JSON.`);
 
+  const { error: delError } = await supabase.from('creators').delete().neq('id', 0);
+  if (delError) throw delError;
+  console.log('Cleared existing creators from database.');
+
   for (let i = 0; i < creators.length; i += BATCH_SIZE) {
     const batch = creators.slice(i, i + BATCH_SIZE);
     const texts = batch.map(buildEmbeddingText);
