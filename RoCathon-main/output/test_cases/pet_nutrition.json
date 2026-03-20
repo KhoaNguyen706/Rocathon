@@ -1,0 +1,304 @@
+{
+  "query": "organic pet food and nutrition tips for dog owners",
+  "brand": {
+    "id": "brand_pet",
+    "industries": [
+      "Pet"
+    ],
+    "target_audience": {
+      "gender": "FEMALE",
+      "age_ranges": [
+        "25-34",
+        "35-44"
+      ]
+    },
+    "gmv": 40000
+  },
+  "top_10": [
+    {
+      "username": "kids_toy_reviews",
+      "bio": "Honest toy reviews from a parent of four. Age-appropriate picks, educational value, and durability testing.",
+      "content_style_tags": [
+        "Toys & Hobbies",
+        "Baby & Maternity"
+      ],
+      "projected_score": 99.57,
+      "metrics": {
+        "follower_count": 1727780,
+        "total_gmv_30d": 115856,
+        "avg_views_30d": 745591,
+        "engagement_rate": 0.14,
+        "gpm": 42,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 6846,
+          "age_ranges": [
+            "45-54"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2329,
+        "projected_score": 99.57,
+        "final_score": 0.6378
+      }
+    },
+    {
+      "username": "toddler_activities_jen",
+      "bio": "Educational play ideas, sensory activities, and creative projects for toddlers. Making learning fun at home.",
+      "content_style_tags": [
+        "Baby & Maternity",
+        "Health"
+      ],
+      "projected_score": 90.01,
+      "metrics": {
+        "follower_count": 1573784,
+        "total_gmv_30d": 49720,
+        "avg_views_30d": 1209453,
+        "engagement_rate": 0.03,
+        "gpm": 16,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 7683,
+          "age_ranges": [
+            "35-44",
+            "45-54"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2275,
+        "projected_score": 90.01,
+        "final_score": 0.5661
+      }
+    },
+    {
+      "username": "dog_adventures_rex",
+      "bio": "Documenting outdoor adventures with my golden retriever. Hiking, swimming, and off-leash parks across the region.",
+      "content_style_tags": [
+        "Pet"
+      ],
+      "projected_score": 94.38,
+      "metrics": {
+        "follower_count": 5899,
+        "total_gmv_30d": 178905,
+        "avg_views_30d": 523334,
+        "engagement_rate": 0.02,
+        "gpm": 31,
+        "demographics": {
+          "major_gender": "MALE",
+          "gender_pct": 8970,
+          "age_ranges": [
+            "18-24"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.3404,
+        "projected_score": 94.38,
+        "final_score": 0.5659
+      }
+    },
+    {
+      "username": "home_gym_builds",
+      "bio": "Budget home gym setup guides, equipment reviews, and space-saving fitness solutions for apartment workouts.",
+      "content_style_tags": [
+        "Sports & Outdoors",
+        "Health"
+      ],
+      "projected_score": 92.59,
+      "metrics": {
+        "follower_count": 1270148,
+        "total_gmv_30d": 122934,
+        "avg_views_30d": 1913655,
+        "engagement_rate": 0.12,
+        "gpm": 43,
+        "demographics": {
+          "major_gender": "MALE",
+          "gender_pct": 6810,
+          "age_ranges": [
+            "25-34",
+            "45-54"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2341,
+        "projected_score": 92.59,
+        "final_score": 0.551
+      }
+    },
+    {
+      "username": "paint_pro_tips_mick",
+      "bio": "Interior and exterior painting techniques, roller and brush tips, and color selection advice for flawless finish results.",
+      "content_style_tags": [
+        "Tools & Hardware",
+        "Home"
+      ],
+      "projected_score": 87.38,
+      "metrics": {
+        "follower_count": 1142592,
+        "total_gmv_30d": 53750,
+        "avg_views_30d": 564078,
+        "engagement_rate": 0.1,
+        "gpm": 23,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 8177,
+          "age_ranges": [
+            "35-44",
+            "45-54",
+            "55+"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2497,
+        "projected_score": 87.38,
+        "final_score": 0.5421
+      }
+    },
+    {
+      "username": "natural_beauty_jade",
+      "bio": "Clean beauty advocate sharing non-toxic skincare, DIY masks, and sustainable cosmetics for conscious consumers.",
+      "content_style_tags": [
+        "Beauty"
+      ],
+      "projected_score": 91.36,
+      "metrics": {
+        "follower_count": 1494742,
+        "total_gmv_30d": 54627,
+        "avg_views_30d": 1564855,
+        "engagement_rate": 0.12,
+        "gpm": 36,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 7884,
+          "age_ranges": [
+            "55+"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2277,
+        "projected_score": 91.36,
+        "final_score": 0.5331
+      }
+    },
+    {
+      "username": "exotic_pets_world_cy",
+      "bio": "Exotic pet education covering ferrets, hedgehogs, chinchillas, and sugar gliders. Responsible exotic pet ownership content.",
+      "content_style_tags": [
+        "Pet",
+        "Health"
+      ],
+      "projected_score": 86.85,
+      "metrics": {
+        "follower_count": 271764,
+        "total_gmv_30d": 58248,
+        "avg_views_30d": 950084,
+        "engagement_rate": 0.13,
+        "gpm": 12,
+        "demographics": {
+          "major_gender": "MALE",
+          "gender_pct": 8456,
+          "age_ranges": [
+            "18-24",
+            "25-34",
+            "55+"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.3116,
+        "projected_score": 86.85,
+        "final_score": 0.5102
+      }
+    },
+    {
+      "username": "gut_health_guru_sam",
+      "bio": "Deep dives into gut health, probiotics, and anti-inflammatory diets. Science-backed wellness content you can trust.",
+      "content_style_tags": [
+        "Health"
+      ],
+      "projected_score": 84.48,
+      "metrics": {
+        "follower_count": 1066761,
+        "total_gmv_30d": 32583,
+        "avg_views_30d": 108326,
+        "engagement_rate": 0.08,
+        "gpm": 8,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 8138,
+          "age_ranges": [
+            "18-24",
+            "25-34"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.256,
+        "projected_score": 84.48,
+        "final_score": 0.5084
+      }
+    },
+    {
+      "username": "parrot_talk_mia",
+      "bio": "Parrot care, trick training, and flock management content for bird owners of parakeets, cockatiels, and parrots.",
+      "content_style_tags": [
+        "Pet"
+      ],
+      "projected_score": 81.1,
+      "metrics": {
+        "follower_count": 826409,
+        "total_gmv_30d": 15829,
+        "avg_views_30d": 1797424,
+        "engagement_rate": 0.08,
+        "gpm": 43,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 5612,
+          "age_ranges": [
+            "18-24",
+            "25-34"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.3413,
+        "projected_score": 81.1,
+        "final_score": 0.5003
+      }
+    },
+    {
+      "username": "home_office_setup_pam",
+      "bio": "Ergonomic home office design, productivity setups, and desk organization for remote workers who want to level up.",
+      "content_style_tags": [
+        "Home",
+        "Food & Beverage"
+      ],
+      "projected_score": 83.86,
+      "metrics": {
+        "follower_count": 1777068,
+        "total_gmv_30d": 45459,
+        "avg_views_30d": 1198299,
+        "engagement_rate": 0.05,
+        "gpm": 19,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 6805,
+          "age_ranges": [
+            "18-24",
+            "25-34"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2327,
+        "projected_score": 83.86,
+        "final_score": 0.4913
+      }
+    }
+  ]
+}

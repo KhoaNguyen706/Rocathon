@@ -1,0 +1,301 @@
+{
+  "query": "luxury anti-aging skincare for women over 40",
+  "brand": {
+    "id": "brand_beauty",
+    "industries": [
+      "Beauty",
+      "Health"
+    ],
+    "target_audience": {
+      "gender": "FEMALE",
+      "age_ranges": [
+        "35-44",
+        "45-54"
+      ]
+    },
+    "gmv": 120000
+  },
+  "top_10": [
+    {
+      "username": "apple_insider_cy",
+      "bio": "Apple ecosystem deep dives, iOS tips, and honest opinions on every new Apple product release and software update.",
+      "content_style_tags": [
+        "Phones & Electronics"
+      ],
+      "projected_score": 99.51,
+      "metrics": {
+        "follower_count": 400950,
+        "total_gmv_30d": 130643,
+        "avg_views_30d": 1527348,
+        "engagement_rate": 0.04,
+        "gpm": 36,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 5198,
+          "age_ranges": [
+            "18-24",
+            "35-44"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2745,
+        "projected_score": 99.51,
+        "final_score": 0.7037
+      }
+    },
+    {
+      "username": "natural_beauty_jade",
+      "bio": "Clean beauty advocate sharing non-toxic skincare, DIY masks, and sustainable cosmetics for conscious consumers.",
+      "content_style_tags": [
+        "Beauty"
+      ],
+      "projected_score": 91.36,
+      "metrics": {
+        "follower_count": 1494742,
+        "total_gmv_30d": 54627,
+        "avg_views_30d": 1564855,
+        "engagement_rate": 0.12,
+        "gpm": 36,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 7884,
+          "age_ranges": [
+            "55+"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.4467,
+        "projected_score": 91.36,
+        "final_score": 0.6207
+      }
+    },
+    {
+      "username": "vintage_archive_mo",
+      "bio": "Vintage fashion curation and authentication. Shopping guides for preloved luxury and rare designer archive pieces.",
+      "content_style_tags": [
+        "Fashion"
+      ],
+      "projected_score": 89.09,
+      "metrics": {
+        "follower_count": 878540,
+        "total_gmv_30d": 127869,
+        "avg_views_30d": 64834,
+        "engagement_rate": 0.12,
+        "gpm": 15,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 6791,
+          "age_ranges": [
+            "18-24",
+            "45-54"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.3638,
+        "projected_score": 89.09,
+        "final_score": 0.6092
+      }
+    },
+    {
+      "username": "small_space_living_lee",
+      "bio": "Maximizing tiny apartments and studio spaces. Clever storage solutions, multifunctional furniture, and smart layouts.",
+      "content_style_tags": [
+        "Home"
+      ],
+      "projected_score": 90.2,
+      "metrics": {
+        "follower_count": 1854255,
+        "total_gmv_30d": 31445,
+        "avg_views_30d": 321751,
+        "engagement_rate": 0.07,
+        "gpm": 40,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 9247,
+          "age_ranges": [
+            "35-44",
+            "45-54",
+            "55+"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2747,
+        "projected_score": 90.2,
+        "final_score": 0.5874
+      }
+    },
+    {
+      "username": "gentle_parenting_sue",
+      "bio": "Gentle parenting philosophy, emotional coaching techniques, and respectful communication strategies for conscious parents.",
+      "content_style_tags": [
+        "Baby & Maternity"
+      ],
+      "projected_score": 89.07,
+      "metrics": {
+        "follower_count": 926719,
+        "total_gmv_30d": 48650,
+        "avg_views_30d": 783647,
+        "engagement_rate": 0.02,
+        "gpm": 31,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 7969,
+          "age_ranges": [
+            "18-24",
+            "25-34"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2742,
+        "projected_score": 89.07,
+        "final_score": 0.5231
+      }
+    },
+    {
+      "username": "vintage_glam_rita",
+      "bio": "Old Hollywood and vintage-inspired makeup looks. Retro beauty tutorials with a modern accessible twist.",
+      "content_style_tags": [
+        "Beauty"
+      ],
+      "projected_score": 80.41,
+      "metrics": {
+        "follower_count": 764168,
+        "total_gmv_30d": 8795,
+        "avg_views_30d": 994644,
+        "engagement_rate": 0.05,
+        "gpm": 20,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 7687,
+          "age_ranges": [
+            "25-34",
+            "35-44"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.3967,
+        "projected_score": 80.41,
+        "final_score": 0.5138
+      }
+    },
+    {
+      "username": "craft_room_heidi",
+      "bio": "Scrapbooking, paper crafting, and DIY project tutorials. Turning everyday materials into meaningful keepsakes.",
+      "content_style_tags": [
+        "Toys & Hobbies"
+      ],
+      "projected_score": 83.64,
+      "metrics": {
+        "follower_count": 1547865,
+        "total_gmv_30d": 32639,
+        "avg_views_30d": 953568,
+        "engagement_rate": 0.04,
+        "gpm": 48,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 9433,
+          "age_ranges": [
+            "35-44",
+            "45-54"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2685,
+        "projected_score": 83.64,
+        "final_score": 0.5029
+      }
+    },
+    {
+      "username": "mid_century_milo",
+      "bio": "Mid-century modern interior design, vintage furniture hunting, and creating timeless spaces with retro flair.",
+      "content_style_tags": [
+        "Home",
+        "Tools & Hardware"
+      ],
+      "projected_score": 82.97,
+      "metrics": {
+        "follower_count": 1707456,
+        "total_gmv_30d": 23644,
+        "avg_views_30d": 855938,
+        "engagement_rate": 0.09,
+        "gpm": 23,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 7668,
+          "age_ranges": [
+            "25-34",
+            "35-44"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2787,
+        "projected_score": 82.97,
+        "final_score": 0.4986
+      }
+    },
+    {
+      "username": "bump_to_baby_style_bri",
+      "bio": "Maternity fashion and postpartum style content. Looking and feeling good through every stage of motherhood.",
+      "content_style_tags": [
+        "Baby & Maternity"
+      ],
+      "projected_score": 82.72,
+      "metrics": {
+        "follower_count": 820658,
+        "total_gmv_30d": 44677,
+        "avg_views_30d": 1433319,
+        "engagement_rate": 0.13,
+        "gpm": 43,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 5275,
+          "age_ranges": [
+            "35-44",
+            "45-54"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.283,
+        "projected_score": 82.72,
+        "final_score": 0.4972
+      }
+    },
+    {
+      "username": "gut_health_guru_sam",
+      "bio": "Deep dives into gut health, probiotics, and anti-inflammatory diets. Science-backed wellness content you can trust.",
+      "content_style_tags": [
+        "Health"
+      ],
+      "projected_score": 84.48,
+      "metrics": {
+        "follower_count": 1066761,
+        "total_gmv_30d": 32583,
+        "avg_views_30d": 108326,
+        "engagement_rate": 0.08,
+        "gpm": 8,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 8138,
+          "age_ranges": [
+            "18-24",
+            "25-34"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.3446,
+        "projected_score": 84.48,
+        "final_score": 0.4938
+      }
+    }
+  ]
+}

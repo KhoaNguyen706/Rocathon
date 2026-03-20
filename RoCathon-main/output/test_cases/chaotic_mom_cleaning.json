@@ -1,0 +1,303 @@
+{
+  "query": "chaotic mom blogger who reviews effective cleaning products",
+  "brand": {
+    "id": "brand_smart_home",
+    "industries": [
+      "Home"
+    ],
+    "target_audience": {
+      "gender": "FEMALE",
+      "age_ranges": [
+        "25-34"
+      ]
+    },
+    "gmv": 50000
+  },
+  "top_10": [
+    {
+      "username": "kids_toy_reviews",
+      "bio": "Honest toy reviews from a parent of four. Age-appropriate picks, educational value, and durability testing.",
+      "content_style_tags": [
+        "Toys & Hobbies",
+        "Baby & Maternity"
+      ],
+      "projected_score": 99.57,
+      "metrics": {
+        "follower_count": 1727780,
+        "total_gmv_30d": 115856,
+        "avg_views_30d": 745591,
+        "engagement_rate": 0.14,
+        "gpm": 42,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 6846,
+          "age_ranges": [
+            "45-54"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.4058,
+        "projected_score": 99.57,
+        "final_score": 0.7069
+      }
+    },
+    {
+      "username": "baby_gear_reviews_amy",
+      "bio": "In-depth baby gear reviews covering strollers, car seats, and nursery essentials. Helping parents buy once, buy right.",
+      "content_style_tags": [
+        "Baby & Maternity",
+        "Toys & Hobbies"
+      ],
+      "projected_score": 100,
+      "metrics": {
+        "follower_count": 1450572,
+        "total_gmv_30d": 186918,
+        "avg_views_30d": 453434,
+        "engagement_rate": 0.07,
+        "gpm": 41,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 8341,
+          "age_ranges": [
+            "45-54"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.385,
+        "projected_score": 100,
+        "final_score": 0.704
+      }
+    },
+    {
+      "username": "apple_insider_cy",
+      "bio": "Apple ecosystem deep dives, iOS tips, and honest opinions on every new Apple product release and software update.",
+      "content_style_tags": [
+        "Phones & Electronics"
+      ],
+      "projected_score": 99.51,
+      "metrics": {
+        "follower_count": 400950,
+        "total_gmv_30d": 130643,
+        "avg_views_30d": 1527348,
+        "engagement_rate": 0.04,
+        "gpm": 36,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 5198,
+          "age_ranges": [
+            "18-24",
+            "35-44"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.3031,
+        "projected_score": 99.51,
+        "final_score": 0.6651
+      }
+    },
+    {
+      "username": "natural_beauty_jade",
+      "bio": "Clean beauty advocate sharing non-toxic skincare, DIY masks, and sustainable cosmetics for conscious consumers.",
+      "content_style_tags": [
+        "Beauty"
+      ],
+      "projected_score": 91.36,
+      "metrics": {
+        "follower_count": 1494742,
+        "total_gmv_30d": 54627,
+        "avg_views_30d": 1564855,
+        "engagement_rate": 0.12,
+        "gpm": 36,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 7884,
+          "age_ranges": [
+            "55+"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.4532,
+        "projected_score": 91.36,
+        "final_score": 0.6233
+      }
+    },
+    {
+      "username": "gentle_parenting_sue",
+      "bio": "Gentle parenting philosophy, emotional coaching techniques, and respectful communication strategies for conscious parents.",
+      "content_style_tags": [
+        "Baby & Maternity"
+      ],
+      "projected_score": 89.07,
+      "metrics": {
+        "follower_count": 926719,
+        "total_gmv_30d": 48650,
+        "avg_views_30d": 783647,
+        "engagement_rate": 0.02,
+        "gpm": 31,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 7969,
+          "age_ranges": [
+            "18-24",
+            "25-34"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2956,
+        "projected_score": 89.07,
+        "final_score": 0.5816
+      }
+    },
+    {
+      "username": "small_space_living_lee",
+      "bio": "Maximizing tiny apartments and studio spaces. Clever storage solutions, multifunctional furniture, and smart layouts.",
+      "content_style_tags": [
+        "Home"
+      ],
+      "projected_score": 90.2,
+      "metrics": {
+        "follower_count": 1854255,
+        "total_gmv_30d": 31445,
+        "avg_views_30d": 321751,
+        "engagement_rate": 0.07,
+        "gpm": 40,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 9247,
+          "age_ranges": [
+            "35-44",
+            "45-54",
+            "55+"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.33,
+        "projected_score": 90.2,
+        "final_score": 0.5595
+      }
+    },
+    {
+      "username": "toddler_activities_jen",
+      "bio": "Educational play ideas, sensory activities, and creative projects for toddlers. Making learning fun at home.",
+      "content_style_tags": [
+        "Baby & Maternity",
+        "Health"
+      ],
+      "projected_score": 90.01,
+      "metrics": {
+        "follower_count": 1573784,
+        "total_gmv_30d": 49720,
+        "avg_views_30d": 1209453,
+        "engagement_rate": 0.03,
+        "gpm": 16,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 7683,
+          "age_ranges": [
+            "35-44",
+            "45-54"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.295,
+        "projected_score": 90.01,
+        "final_score": 0.5431
+      }
+    },
+    {
+      "username": "home_office_setup_pam",
+      "bio": "Ergonomic home office design, productivity setups, and desk organization for remote workers who want to level up.",
+      "content_style_tags": [
+        "Home",
+        "Food & Beverage"
+      ],
+      "projected_score": 83.86,
+      "metrics": {
+        "follower_count": 1777068,
+        "total_gmv_30d": 45459,
+        "avg_views_30d": 1198299,
+        "engagement_rate": 0.05,
+        "gpm": 19,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 6805,
+          "age_ranges": [
+            "18-24",
+            "25-34"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.3094,
+        "projected_score": 83.86,
+        "final_score": 0.522
+      }
+    },
+    {
+      "username": "lifestyle_creator_bri",
+      "bio": "Casual lifestyle content for everyday moments. I share what is real, not what is perfect.",
+      "content_style_tags": [
+        "Health",
+        "Food & Beverage"
+      ],
+      "projected_score": 82,
+      "metrics": {
+        "follower_count": 310000,
+        "total_gmv_30d": 48000,
+        "avg_views_30d": 620000,
+        "engagement_rate": 0.07,
+        "gpm": 12.5,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 7300,
+          "age_ranges": [
+            "18-24",
+            "25-34",
+            "35-44"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.3333,
+        "projected_score": 82,
+        "final_score": 0.5083
+      }
+    },
+    {
+      "username": "mid_century_milo",
+      "bio": "Mid-century modern interior design, vintage furniture hunting, and creating timeless spaces with retro flair.",
+      "content_style_tags": [
+        "Home",
+        "Tools & Hardware"
+      ],
+      "projected_score": 82.97,
+      "metrics": {
+        "follower_count": 1707456,
+        "total_gmv_30d": 23644,
+        "avg_views_30d": 855938,
+        "engagement_rate": 0.09,
+        "gpm": 23,
+        "demographics": {
+          "major_gender": "FEMALE",
+          "gender_pct": 7668,
+          "age_ranges": [
+            "25-34",
+            "35-44"
+          ]
+        }
+      },
+      "scores": {
+        "semantic_score": 0.2939,
+        "projected_score": 82.97,
+        "final_score": 0.5047
+      }
+    }
+  ]
+}

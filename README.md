@@ -95,6 +95,19 @@ npm run search -- "Gentle skincare routines" brand_beauty
 npm run search -- "Tech gadgets for college students" brand_smart_home
 ```
 
+## Pre-generated Test Cases
+
+Don't have OpenAI/Supabase keys? No problem — check `output/test_cases/` for pre-generated results across different queries and brand profiles:
+
+| File | Query | Brand |
+|---|---|---|
+| `chaotic_mom_cleaning.json` | "chaotic mom blogger who reviews effective cleaning products" | brand_smart_home |
+| `tech_gadgets_students.json` | "tech gadgets and phone accessories for college students" | brand_fitness |
+| `luxury_anti_aging.json` | "luxury anti-aging skincare for women over 40" | brand_beauty |
+| `pet_nutrition.json` | "organic pet food and nutrition tips for dog owners" | brand_pet (custom) |
+
+Each file contains the full `RankedCreator[]` top 10 with all scores and metrics.
+
 ## Extra Features
 
 - **Query cache** — Repeated queries skip the OpenAI API entirely. Embeddings are cached in a `query_cache` table so the same search is instant and free the second time.
@@ -120,7 +133,12 @@ RoCathon-main/
 │   └── search.ts              # CLI — run any custom query
 └── output/
     ├── results.json           # All demo results
-    └── submission.json        # brand_smart_home top 10 (submission file)
+    ├── submission.json        # brand_smart_home top 10 (submission file)
+    └── test_cases/            # Pre-generated results for 4 diverse queries
+        ├── chaotic_mom_cleaning.json
+        ├── tech_gadgets_students.json
+        ├── luxury_anti_aging.json
+        └── pet_nutrition.json
 ```
 
 ## Tech Stack
