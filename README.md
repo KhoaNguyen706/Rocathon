@@ -62,7 +62,13 @@ Fill in your `.env`:
 npm run ingest
 ```
 
-Embeds all 200 creators and inserts them into Supabase. Uses OpenAI `text-embedding-3-small`. Safe to re-run (upserts).
+Embeds all creators and inserts them into Supabase. Uses OpenAI `text-embedding-3-small`. Clears existing data first, so it's safe to re-run with different datasets.
+
+To ingest a custom file instead of `creators.json`:
+
+```bash
+npx ts-node scripts/ingest.ts custom_creators.json
+```
 
 ### 5. Run demo
 

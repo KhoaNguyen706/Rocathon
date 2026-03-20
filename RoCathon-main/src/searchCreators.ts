@@ -45,12 +45,12 @@ export async function searchCreators(
   if (error) throw error;
 
   const ranked: RankedCreator[] = (rows ?? []).map((row: any) => {
-    const semanticScore: number = parseFloat(row.semantic_score);
-    const projectedRaw: number = parseFloat(row.projected_score);
+    const semanticScore: number = parseFloat(row.semantic_score) || 0;
+    const projectedRaw: number = parseFloat(row.projected_score) || 60;
     const normalizedProjected = normalizeProjectedScore(projectedRaw);
 
     const demographicBonus = computeDemographicBonus(
-      row.major_gender,
+      row.major_gender || '',
       row.age_ranges ?? [],
       brandProfile
     );
@@ -62,18 +62,18 @@ export async function searchCreators(
 
     return {
       username: row.username,
-      bio: row.bio,
-      content_style_tags: row.content_style_tags as Industry[],
+      bio: row.bio || '',
+      content_style_tags: (row.content_style_tags || []) as Industry[],
       projected_score: projectedRaw,
       metrics: {
-        follower_count: row.follower_count,
-        total_gmv_30d: row.total_gmv_30d,
-        avg_views_30d: row.avg_views_30d,
-        engagement_rate: row.engagement_rate,
-        gpm: row.gpm,
+        follower_count: row.follower_count ?? 0,
+        total_gmv_30d: row.total_gmv_30d ?? 0,
+        avg_views_30d: row.avg_views_30d ?? 0,
+        engagement_rate: row.engagement_rate ?? 0,
+        gpm: row.gpm ?? 0,
         demographics: {
-          major_gender: row.major_gender,
-          gender_pct: row.gender_pct,
+          major_gender: row.major_gender || 'UNKNOWN',
+          gender_pct: row.gender_pct ?? 0,
           age_ranges: row.age_ranges ?? [],
         },
       },
