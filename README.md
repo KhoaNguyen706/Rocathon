@@ -1,149 +1,207 @@
-# RoCathon — Hybrid Creator Search Engine
+# AI Creator Discovery Copilot
 
-A search engine that ranks TikTok Shop creators by combining **semantic similarity** with **commercial performance**. Built for the RoC Hackathon.
+Natural-language creator search for brand campaigns. Type a brief in
+plain English → get a ranked shortlist of creators plus an AI-generated
+insights summary.
+
+> Evolution of the previous RoCathon TypeScript search engine. This
+> version is a full web app built around a **Moss** semantic retrieval
+> core, a FastAPI multi-agent backend (Gemini + OpenAI + LangChain), and a
+> Next.js + Tailwind frontend.
 
 ## Architecture
 
-![Architecture](image.png)
-
-## How It Works
-
-1. **Embed creators** — Each creator's bio, content tags, and audience demographics are embedded into a 1536-dim vector using OpenAI `text-embedding-3-small`
-2. **Vector search** — When a brand searches, the query gets embedded the same way and pgvector finds the top 50 closest creators by cosine similarity
-3. **Hybrid re-ranking** — Each candidate gets a final score using the formula below, then sorted
-
-## Scoring Formula
-
-I started with the recommended weights (0.45 / 0.55) and added a **demographic alignment bonus** as an extra 10% signal:
-
 ```
-final_score = 0.40 * semantic_score + 0.50 * projected_score + 0.10 * demographic_bonus
+Next.js (App Router)  ──►  FastAPI  ──►  ┌─────────────────────────────┐
+                                         │ 1. Parse brief  (Gemini)    │
+                                         │ 2. Moss retrieval (top 50)  │
+                                         │ 3. Hybrid rerank (Python)   │
+                                         │ 4. Insights     (Gemini)    │
+                                         └─────────────────────────────┘
+                                                │
+                                                ▼
+                                       JSON ► rendered in UI
 ```
 
-| Signal | Weight | What it is |
-|---|---|---|
-| Semantic Score | 0.40 | Cosine similarity between query and creator embedding (0-1) |
-| Projected Score | 0.50 | RoC's pre-computed commerce score, normalized from 60-100 to 0-1 |
-| Demographic Bonus | 0.10 | 1.0 if creator audience matches brand's target gender + age, 0.5 for partial match, 0 otherwise |
+### Hybrid scoring
 
-**Why demographic bonus?** A beauty brand targeting women 25-34 should prefer creators whose audience IS women 25-34, even if the bio doesn't say so. This is a signal that semantic similarity alone can't capture.
-
-**Why these weights?** Projected score gets the most weight (0.50) because the whole point is to avoid the AI search false positive problem — a creator with perfect vibes but $0 GMV should never beat one with good vibes and real sales. The 0.40 semantic weight still makes sure we're finding relevant creators, not just top sellers.
-
-## Setup
-
-### 1. Clone and install
-
-```bash
-git clone <repo-url>
-cd RoCathon-main
-npm install
+```
+final_score = 0.40 * semantic_score
+            + 0.50 * projected_score   (normalised 60–100 → 0–1)
+            + 0.10 * demographic_bonus
 ```
 
-### 2. Environment variables
+| Signal             | Weight | What it is |
+|--------------------|:------:|------------|
+| Semantic score     | 0.40   | Cosine similarity between query and creator embedding |
+| Projected score    | 0.50   | RoC's pre-computed commerce score |
+| Demographic bonus  | 0.10   | 1.0 if gender + age match, 0.5 for one match, 0.0 otherwise |
+
+## Project structure
+
+```
+/
+├── backend/                # FastAPI + LangChain + Moss
+│   ├── main.py             # App entry, boots Moss on startup
+│   ├── routers/search.py   # POST /search
+│   ├── services/
+│   │   ├── parse_brief.py      # Agent 1 — brief → structured JSON (Gemini)
+│   │   ├── moss_retriever.py   # Semantic index (provider embeddings + fallback)
+│   │   ├── embedding_client.py # Provider-aware embedding client + cache hooks
+│   │   ├── cache_store.py      # Embedding + search result cache
+│   │   ├── creator_store.py    # PostgreSQL / JSON creator source
+│   │   ├── reranker.py         # Hybrid scoring formula
+│   │   ├── insights.py         # Agent 2 — results → summary (Gemini)
+│   │   ├── orchestrator.py     # LangChain Runnable pipeline
+│   │   └── gemini_client.py    # Thin SDK wrapper
+│   ├── models/schemas.py   # Pydantic request/response models
+│   ├── data/creators.json  # ~200 mock creators
+│   └── Dockerfile
+├── frontend/               # Next.js 14 + Tailwind
+│   ├── app/page.tsx        # Single-page UI
+│   ├── components/         # SearchForm, ParsedQueryCard, ResultsTable, InsightsPanel
+│   ├── lib/{api,types}.ts  # Typed API client
+│   └── Dockerfile
+├── docker-compose.yml
+└── RoCathon-main/          # Previous hackathon submission (kept for reference)
+```
+
+## Quick start
+
+### Option A — Docker Compose (zero local install)
 
 ```bash
 cp .env.example .env
+# optionally paste your OpenAI/Gemini keys into .env
+docker compose up -d --build
 ```
 
-Fill in your `.env`:
-- `OPENAI_API_KEY` — from [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
-- `SUPABASE_URL` — your Supabase project URL
-- `SUPABASE_SERVICE_ROLE_KEY` — from Supabase Dashboard > Settings > API
+Visit **http://localhost:3000**.
 
-### 3. Supabase setup
+### Choose creator store + cache
 
-1. Create a free project at [supabase.com](https://supabase.com)
-2. Go to **SQL Editor** and run everything in `sql/setup.sql` — this creates the tables and the vector search function
+In `.env` (root or `backend/.env`) set storage:
 
-### 4. Ingest creators
+- `CREATOR_STORE=postgres` (recommended default)
+- `DATABASE_URL=...` (PostgreSQL)
+- `CACHE_BACKEND=sqlite|memory`
+- `CACHE_SQLITE_PATH=./data/cache.db`
+- `SEARCH_CACHE_TTL_SECONDS=1800`
+
+By default, Docker Compose starts `frontend`, `backend`, and `postgres`
+together, so no extra infrastructure setup is needed.
+
+### Option B — Run locally
+
+**Backend**
 
 ```bash
-npm run ingest
+cd backend
+python -m venv .venv
+.venv\Scripts\activate          # Windows PowerShell
+# source .venv/bin/activate     # macOS / Linux
+pip install -r requirements.txt
+cp .env.example .env            # optional
+uvicorn main:app --reload --port 8000
 ```
 
-Embeds all creators and inserts them into Supabase. Uses OpenAI `text-embedding-3-small`. Clears existing data first, so it's safe to re-run with different datasets.
-
-To ingest a custom file instead of `creators.json`:
+**Frontend**
 
 ```bash
-npx ts-node scripts/ingest.ts custom_creators.json
+cd frontend
+cp .env.local.example .env.local
+npm install
+npm run dev
 ```
 
-### 5. Run demo
+Frontend: http://localhost:3000 · Backend: http://localhost:8000/docs
 
-```bash
-npm run demo
+## API
+
+### `POST /search`
+
+```json
+{
+  "query": "Find creators for affordable smart home gadgets targeting college students, Gen Z",
+  "top_k": 10
+}
 ```
 
-Runs 3 search queries and saves results to `output/results.json`. Also generates `output/submission.json` with the brand_smart_home top 10.
+**Response**
 
-### 6. Run any custom query
-
-```bash
-npm run search -- "your query here" brand_smart_home
+```json
+{
+  "parsed_query": {
+    "category": "smart home",
+    "audience_age": ["18-24"],
+    "gender": "ANY",
+    "tone": null,
+    "niche": ["Home", "Phones & Electronics"],
+    "keywords": ["affordable", "smart", "home", "gadgets", "college", "students"]
+  },
+  "results": [
+    {
+      "username": "…",
+      "bio": "…",
+      "content_style_tags": ["Home"],
+      "projected_score": 88,
+      "metrics": { "…": "…" },
+      "scores": {
+        "semantic_score": 0.7321,
+        "projected_score": 0.7,
+        "demographic_bonus": 1.0,
+        "final_score": 0.7429
+      }
+    }
+  ],
+  "insights": "The top 10 creators skew toward Home and Phones & Electronics…"
+}
 ```
 
-Available brands: `brand_smart_home` (default), `brand_fitness`, `brand_beauty`
+### `GET /health`
 
-Examples:
+Returns whether Gemini is configured and which Moss backend is active
+(`embedding:openai` / `embedding:gemini` or `tfidf` fallback), plus
+active cache backend/provider info.
 
-```bash
-npm run search -- "Affordable home decor for small apartments"
-npm run search -- "High-energy fitness content" brand_fitness
-npm run search -- "Gentle skincare routines" brand_beauty
-npm run search -- "Tech gadgets for college students" brand_smart_home
-```
+## About "Moss"
 
-## Pre-generated Test Cases
+`MossRetriever` (in `backend/services/moss_retriever.py`) is the
+semantic-search abstraction. In the MVP it ships with two backends:
 
-Don't have OpenAI/Supabase keys? No problem — check `output/test_cases/` for pre-generated results across different queries and brand profiles:
+1. **Provider embeddings** (`EMBEDDING_PROVIDER=openai|gemini`) +
+   in-memory cosine similarity.
+2. **Pure-Python TF-IDF** — dependency-free fallback so demos run
+   offline.
 
-| File | Query | Brand |
-|---|---|---|
-| `chaotic_mom_cleaning.json` | "chaotic mom blogger who reviews effective cleaning products" | brand_smart_home |
-| `tech_gadgets_students.json` | "tech gadgets and phone accessories for college students" | brand_fitness |
-| `luxury_anti_aging.json` | "luxury anti-aging skincare for women over 40" | brand_beauty |
-| `pet_nutrition.json` | "organic pet food and nutrition tips for dog owners" | brand_pet (custom) |
+Both implement the same `build(creators)` / `search(query, top_k)`
+interface, so swapping in a real vector DB (Pinecone, Chroma, Weaviate)
+means editing only that one file.
 
-Each file contains the full `RankedCreator[]` top 10 with all scores and metrics.
+## Cost control (cache)
 
-## Extra Features
+To protect OpenAI credits, the backend now caches:
 
-- **Query cache** — Repeated queries skip the OpenAI API entirely. Embeddings are cached in a `query_cache` table so the same search is instant and free the second time.
-- **Enriched embeddings** — Creator embeddings include audience demographics in the text (e.g. "Audience: primarily female, ages 25-34"), so demographic-related queries get better semantic matches.
-- **HTTPS connection** — Uses the Supabase JS client instead of direct Postgres, so it works on any network regardless of IPv4/IPv6 support.
+- **Embedding cache** keyed by provider + model + text hash
+- **Search-response cache** keyed by provider + query + top_k (TTL-based)
 
-## Project Structure
+Default cache backend is SQLite (`./data/cache.db`) so it persists across restarts.
 
-```
-RoCathon-main/
-├── creators.json              # 200 mock creators
-├── sql/
-│   └── setup.sql              # DB schema + vector search function
-├── src/
-│   ├── types.ts               # TypeScript interfaces (given)
-│   ├── db.ts                  # Supabase client
-│   ├── embed.ts               # OpenAI embedding + query cache
-│   └── searchCreators.ts      # Hybrid search (semantic + projected + demographic)
-├── scripts/
-│   ├── setupDb.ts             # Prints setup SQL
-│   ├── ingest.ts              # Embeds + inserts creators
-│   ├── demo.ts                # Runs demo queries, outputs JSON
-│   └── search.ts              # CLI — run any custom query
-└── output/
-    ├── results.json           # All demo results
-    ├── submission.json        # brand_smart_home top 10 (submission file)
-    └── test_cases/            # Pre-generated results for 4 diverse queries
-        ├── chaotic_mom_cleaning.json
-        ├── tech_gadgets_students.json
-        ├── luxury_anti_aging.json
-        └── pet_nutrition.json
-```
+## Demo mode (no API key)
 
-## Tech Stack
+Leave `OPENAI_API_KEY` and `GEMINI_API_KEY` blank and the app still runs end-to-end:
 
-- TypeScript + Node.js
-- OpenAI `text-embedding-3-small`
-- Supabase (Postgres + pgvector)
-- `@supabase/supabase-js`
+- **parse agent** → regex/keyword heuristics
+- **retrieval**  → TF-IDF cosine similarity
+- **insights**   → deterministic template summary
+
+The hybrid scoring formula and the UI behave identically.
+
+## Extending
+
+- **Swap the retriever** — replace `MossRetriever` internals with your
+  vector DB of choice.
+- **Add an agent** — drop a new step into `services/orchestrator.py`
+  (the pipeline uses `RunnableLambda`, so new stages are one line).
+- **Personalise brand profiles** — extend `ParsedQuery` with brand
+  context and wire it into the reranker.

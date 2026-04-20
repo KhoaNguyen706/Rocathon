@@ -1,0 +1,64 @@
+services:
+  backend:
+    build: ./backend
+    container_name: copilot-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - EMBEDDING_PROVIDER=${EMBEDDING_PROVIDER:-openai}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OPENAI_EMBED_MODEL=${OPENAI_EMBED_MODEL:-text-embedding-3-small}
+      - CREATOR_STORE=${CREATOR_STORE:-postgres}
+      - CREATORS_PATH=${CREATORS_PATH:-./data/creators.json}
+      - DATABASE_URL=${DATABASE_URL:-}
+      - POSTGRES_CREATORS_TABLE=${POSTGRES_CREATORS_TABLE:-creators}
+      - CACHE_BACKEND=${CACHE_BACKEND:-sqlite}
+      - CACHE_SQLITE_PATH=${CACHE_SQLITE_PATH:-./data/cache.db}
+      - SEARCH_CACHE_TTL_SECONDS=${SEARCH_CACHE_TTL_SECONDS:-1800}
+      - SEARCH_CACHE_VERSION=${SEARCH_CACHE_VERSION:-v4}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - GEMINI_CHAT_MODEL=${GEMINI_CHAT_MODEL:-gemini-1.5-flash}
+      - GEMINI_EMBED_MODEL=${GEMINI_EMBED_MODEL:-text-embedding-004}
+      - CORS_ORIGINS=${CORS_ORIGINS:-*}
+    volumes:
+      - ./backend/data:/app/data
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request,sys;sys.exit(0 if urllib.request.urlopen('http://localhost:8000/health').status==200 else 1)\""]
+      start_period: 300s
+      interval: 15s
+      timeout: 3s
+      retries: 30
+
+  frontend:
+    build: ./frontend
+    container_name: copilot-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: copilot-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-creator_copilot}
+      - POSTGRES_USER=${POSTGRES_USER:-copilot}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-copilot}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-copilot} -d ${POSTGRES_DB:-creator_copilot}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:

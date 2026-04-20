@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background: #f4f2ec;
+  color: #121212;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle paper-grain background, very soft so it reads clean. */
+body {
+  background-image:
+    radial-gradient(80rem 40rem at 10% -10%, rgba(245, 181, 234, 0.18), transparent 60%),
+    radial-gradient(60rem 30rem at 120% 20%, rgba(211, 242, 106, 0.16), transparent 60%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d3cb;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b1aa;
+}
+
+/* Live pulsing "blob" used in hero + loading panel. */
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(8px, -10px) scale(1.04); }
+  66% { transform: translate(-6px, 6px) scale(0.98); }
+}
+.animate-blob { animation: blob 6s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 17, 0.04) 0%,
+    rgba(17, 17, 17, 0.12) 50%,
+    rgba(17, 17, 17, 0.04) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
